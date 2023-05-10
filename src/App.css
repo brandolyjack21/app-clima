@@ -116,6 +116,10 @@
     font-size: 20px;
     box-shadow: 0 7px 10px #192329;
 }
+.estado-del-clima{
+    font-size: 35px;
+    margin-top: 10px;
+}
 
 @media (min-width:425px) {
     .main--container{

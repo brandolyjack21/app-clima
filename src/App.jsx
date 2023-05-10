@@ -1,6 +1,7 @@
 import { useState,useEffect } from 'react'
 import './App.css'
 import axios from 'axios'
+import imagen from '../src/imagen-clima.png'
 
 function App() {
   
@@ -30,6 +31,7 @@ function App() {
       }
     },[cityName])
    console.log(objClima, 'brandoly')
+   const imagenDeClima = imagen
 
   return (
     <div className='container'>
@@ -47,7 +49,7 @@ function App() {
         <div className='main--container'>
           <div className='container-png'>
             <span className='temperature'>{temperature? Math.floor(objClima.main?.temp) - 273:Math.floor((objClima.main?.temp - 273) *1.8 +32) }{temperature?'°C':' °F'}</span>
-            <img className='img-clima' src="image-removebg-preview.png" alt="" />
+            <img className='img-clima' src={imagenDeClima} alt="" />
           </div>
           <ul className='container--list'>
             <li className='list'>viento {objClima.wind?.speed} m/s</li>
@@ -56,7 +58,7 @@ function App() {
           </ul>
           <div className='container--country'>
           <p>{objClima.sys?.country}</p>
-          <p>{objClima.weather?.[0].description}</p>  
+          <p className='estado-del-clima'>{objClima.weather?.[0].description}</p>  
           </div>
         </div>
       </main>
