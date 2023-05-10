@@ -47,7 +47,6 @@ function App() {
         <div className='main--container'>
           <div className='container-png'>
             <span className='temperature'>{temperature? Math.floor(objClima.main?.temp) - 273:Math.floor((objClima.main?.temp - 273) *1.8 +32) }{temperature?'°C':' °F'}</span>
-            <img className='img-clima2' src="../img/image-removebg-preview.png" alt="" />
             <img className='img-clima' src="../img/image-removebg-preview.png" alt="" />
           </div>
           <ul className='container--list'>

@@ -117,10 +117,6 @@
     box-shadow: 0 7px 10px #192329;
 }
 
-.img-clima2{
-    display: none;
-}
-
 @media (min-width:425px) {
     .main--container{
         position: relative;
