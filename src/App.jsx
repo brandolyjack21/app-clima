@@ -47,7 +47,7 @@ function App() {
         <div className='main--container'>
           <div className='container-png'>
             <span className='temperature'>{temperature? Math.floor(objClima.main?.temp) - 273:Math.floor((objClima.main?.temp - 273) *1.8 +32) }{temperature?'°C':' °F'}</span>
-            <img className='img-clima' src="../img/image-removebg-preview.png" alt="" />
+            <img className='img-clima' src="image-removebg-preview.png" alt="" />
           </div>
           <ul className='container--list'>
             <li className='list'>viento {objClima.wind?.speed} m/s</li>
@@ -64,7 +64,7 @@ function App() {
       <button className='button' 
       type='button'
       onClick={() => setTemperature(!temperature)}>{temperature?'Cambiar a F°':'cambiar a grados °C'}</button>
-      </div>
+      </div> 
     </div>
   )
 }
